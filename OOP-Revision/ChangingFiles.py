@@ -3,12 +3,12 @@ import os
 class fileNameChanger:
     i = 1
     def changer(self, dir, pre):
-        i = 1
+
         for fileName in os.listdir(dir):
-            dis = dir + "/" + pre + str(i) + ".txt"
+            dis = dir + "/" + pre + str(self.i) + ".txt"
             src = dir + "/" + fileName
-            dis = dir + "/" + dis
-            i += 1
+
+            self.i += 1
             os.rename(src, dis)
 
 
